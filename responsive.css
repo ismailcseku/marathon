@@ -1,0 +1,330 @@
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+ 
+ 
+/*==========  Mobile First Method  ==========*/
+ 
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+.container {
+	width: 940px;
+}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+ 
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {
+html {
+	font-size: 90%;
+}
+.testimonial-carousel .owl-controls .owl-pagination {
+	margin-right: 15px !important;
+}
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+.header .navbar-default .navbar-nav > li > a {
+  font-size: 15px;
+  margin: 0;
+  padding: 0 4px;
+}
+html {
+	font-size: 75%;
+}
+.post-area .post-thumb .thumb-pic {
+	width: 100%;
+}
+
+.post-thumb .details a img {
+	width: 40%;
+}
+
+.divider, .parallax {
+  background-attachment: scroll;
+}
+.navbar-nav  .dropdown-menu {
+    left: auto;
+}
+#header-logo {
+	padding: 10px 15px;
+}
+section > .container, section > .container-fluid {
+	padding-bottom: 30px;
+}
+
+.project-1,.project-2,.project-3,.project-4,.project-5 {
+	text-align: center;
+}
+
+/* 
+.project .project-2,.project-4 {
+	margin-left: 0;
+	padding: 0;
+}*/
+.header .navbar-default .navbar-nav > li > a::after {
+	display: none;
+}
+#about .icon-box, .our-mission, .team-member, .table-list, .working-progress, #contact .contact-info {
+	margin-bottom: 60px !important;
+}
+.static-testimonial .testimonial-thumb {
+	margin-left: auto;
+	margin-right: auto;
+  	margin-top: 30px;
+}
+.testimonial-carousel .owl-controls .owl-pagination {
+	margin-right: 0px !important;
+}
+.masonry-filters > li {
+	padding-bottom: 10px;
+}
+.funfact {
+    text-align: center;
+}
+.map {
+	margin-top: 30px;
+}
+.curve-bg:after, .curve-bg-half:after {
+	left: auto;
+	-webkit-transform: rotate(-0deg);
+	-moz-transform: rotate(-0deg);
+	-ms-transform: rotate(-0deg);
+	-o-transform: rotate(-0deg);
+	transform: rotate(-0deg);
+}
+.blog-posts .entry-header .entry-title {
+	padding-top: 0;
+}
+.blog-posts .entry-header .entry-date {
+	margin-left: 0;
+}
+.contact-wrapper {
+    padding: 50px 30px;
+}
+.masonry-filters > li > a.active::after, 
+.masonry-filters > li > a:hover::after {
+	background: none;
+	height: 0;
+}
+.header #header-logo {
+	padding-top: 20px;
+}
+.minimal-layout .header #header-logo,
+.vertical-header .header #header-logo {
+	padding-top: 10px;
+}
+.header .navbar-default .navbar-toggle {
+	margin-top: 18px;
+}
+.minimal-layout .header .navbar-default .navbar-toggle {
+	margin-top: 8px;
+}
+.header #header-logo img {
+	height: 30px;
+}
+.pricing-table .table-price {
+	font-size: 30px;
+}
+.masonry-items .masonry-item h3 {
+	font-size: 16px;
+}
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+html {
+	font-size: 60%;
+}
+.race-btn .icon-box .media-left,
+.race-btn .icon-box .media-body {
+	display: inline-block;
+	margin: 0;
+}
+.sm-text-center {
+	text-align: center;
+}
+#header-logo {
+	padding: 10px 15px;
+}
+#spinner {
+	left: 42%;
+}
+.navbar-default .navbar-toggle {
+	margin-top: 15px;
+	border-radius: 0px;
+}
+#home .home-content p {
+	margin: 15px 0;
+	font-size: 14px;
+}
+.icon-box {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.icon-box {
+	text-align: center;
+}
+.icon-box.left {
+	text-align: center;
+}
+.icon-box.left a {
+  margin-right: 0;
+  padding: 0;
+}
+.icon-box .media-left {
+	float: none !important;
+	margin: 0 0 30px 0;
+}
+.product .product-thumb img {
+  width: 100%;
+}
+.call-to-action {
+	text-align: center;
+}
+.call-to-action .icon {
+	float: none;
+}
+.sidebar.pull-left,
+.sidebar.pull-right {
+	float: none !important;
+}
+.navbar-header {
+  width: 100%;
+  float: none;
+}
+.header .navbar-default .navbar-nav > li {
+  padding: 10px 0;
+}
+.navbar-nav {
+  background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+}
+
+.race-btn {
+	max-width: 100%;
+}
+#navbar.navbar-collapse {
+  max-height: 400px !important;
+}
+.navbar-nav .dropdown-menu {
+	position: relative !important;
+	float: none !important;
+	background: transparent !important;
+	display: block !important;
+	border: none !important;
+}
+.navbar-nav {
+  float: none !important;
+}
+.header .navbar-default .navbar-nav > li {
+  padding: 0 !important;
+}
+.navbar-collapse .navbar-nav li a {
+  border-bottom: 1px solid #333 !important;
+  padding: 15px !important;
+}
+.navbar-nav .dropdown-menu li a {
+	padding-left: 50px !important;
+	font-size: 13px !important;
+	color: #fff;
+}
+body.home .project .project-2 {
+  margin-left: auto !important;
+}
+body.home .project .project-3, .project .project-5 {
+  margin-left: auto !important;
+}
+body.home .project .project-4 {
+  margin-left: auto !important;
+	margin-bottom: 0 !important;
+}
+body.home .race-btn {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+body.home .countdown-box {
+	text-align:center;
+}
+body.home .countdown-box .icon-box {
+	display: inline-block;
+}
+body.home .countdown-box h1 {
+  font-size: 30px;
+}
+body.home .countdown-box h3 {
+  font-size: 17px;
+}
+body.home .countdown-box img {
+  height: 135px;
+}
+.team-members li {
+  border: 0 !important;
+  width: 40% !important;
+}
+#home h1 {
+  font-size: 30px !important;
+}
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px) {
+html {
+	font-size: 50%;
+}
+.race-btn .icon-box .media-left,
+.race-btn .icon-box .media-body {
+	display: inline-block;
+	margin: 0;
+}
+
+.icon-box .media-left, .icon-box .media-right, .icon-box .media-body {
+	display: block;
+	text-align: center;
+}
+.post-thumb .details h4 {
+	font-size: 11px;
+}
+
+.xs-text-center {
+	text-align: center;
+}
+.post > div {
+	width: 100%;
+}
+.vertical-text-carousel .owl-controls .owl-buttons {
+	top: 18%;
+}
+.masonry-items .masonry-item {
+	width: 84% !important;
+}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 319px) {
+html {
+	font-size: 35%;
+}
+}
