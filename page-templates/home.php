@@ -20,8 +20,8 @@ get_header(); ?>
             </a>
               <div class="media-body">
                 <h1 class="media-heading heading text-uppercase">Jerusalem marathon </h1>
-                <h3 id="clock"></h3>
-                <h4>Total Amount Donated: <?php ism_total_amount_donated_towards_jerusalem();?></h4>
+                <h3 id="clock" class=""></h3>
+                <h4 class="">Total Amount Donated: <?php ism_total_amount_donated_towards_jerusalem();?></h4>
               </div>
             </div>
         </div>
