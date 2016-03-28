@@ -869,11 +869,20 @@
                 if (!$(this).hasClass('appeared')) {
                     var goal = $(this).data('goal');
                     var raised = $(this).data('raised');
-										var percent = Math.floor((raised*100)/goal);
+                    var percent = Math.floor((raised*100)/goal);
                     var barcolor = $(this).data('barcolor');
                     $(this).parent().append('<span class="start">|<br>$0</span>');
-                    $(this).parent().append('<div class="goal"><span class="top arrow-down">GOAL</span> <span class="bottom">|<br>$' + goal + '</span></div>');
-                    $(this).append('<div class="percent"><span class="top arrow-down">Raised</span> <span class="bottom">|<br>$' + raised + '</span></div>');
+
+                    if(percent>100) {
+                        percent = 70;
+                        $(this).parent().append('<div class="goal"><span class="top arrow-down">Raised</span> <span class="bottom">|<br>$' + raised+ '</span></div>');
+                        $(this).append('<div class="percent"><span class="top arrow-down">GOAL</span> <span class="bottom">|<br>$' + goal + '</span></div>');
+                        $(this).parent('.progress').css('background-color', '#d2edaa');
+                    } else {
+                        $(this).parent().append('<div class="goal"><span class="top arrow-down">GOAL</span> <span class="bottom">|<br>$' + goal + '</span></div>');
+                        $(this).append('<div class="percent"><span class="top arrow-down">Raised</span> <span class="bottom">|<br>$' + raised + '</span></div>');
+                    }
+
                     $(this).css('background-color', barcolor);
                     $(this).css('width', percent + '%');
                     $(this).addClass('appeared');

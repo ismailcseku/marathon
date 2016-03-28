@@ -27,6 +27,19 @@ get_header(); ?>
         </div>
       </div>
     </section>
+    
+    <!-- Divider: -->
+    <section class="divider parallax countdown-box" data-bg-color="#eee">
+      <div class="container pt-40 pb-40">
+        <div class="row">
+          <div class="col-md-12 text-center"> 
+                <p class="">With nearly $30,000 raised in your honor, together with the children and families of ALEH, we all thank you the runners for making it happen!!! Hope you had an amazing time, and stay tuned for our spots in International marathons over the next several months!!</p>
+
+<p class="">v  Up next: Berlin Marathon, Sunday, September 25th ; contact us asap for one of the last available spots!</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="choose-run">
       <div class="container pt-0 pb-0">
