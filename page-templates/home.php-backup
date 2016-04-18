@@ -70,12 +70,12 @@ get_header(); ?>
             </div>
             <div class="col-md-6">
               <div class="row">
-
                 <div class="col-xs-6 col-md-6 project-2">
-    <a href="<?php echo esc_url( home_url( '/register-berlin' ) ); ?>">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/4.png" alt="">
-                  <div class="sm-city-name">Berlin</div>
-                  <div class="sm-date">9.25.16</div></a>
+		              <a>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/2.png" alt="">
+                    <div class="sm-city-name">Chicago</div>
+                    <div class="sm-date"></div>
+		              </a>
                 </div>
 
                 <div class="col-xs-6 col-md-6 project-3">
@@ -84,13 +84,12 @@ get_header(); ?>
                   <div class="sm-city-name">Tiberias</div>
                   <div class="sm-date" style="font-size: 13px;">Stay tuned for 2017 date</div></a>
                 </div>
-                
+
                 <div class="col-xs-6 col-md-6 project-4">
-                  <a>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/2.png" alt="">
-                    <div class="sm-city-name">Chicago</div>
-                    <div class="sm-date"></div>
-                  </a>
+		<a href="<?php echo esc_url( home_url( '/register-berlin' ) ); ?>">
+                  <img src="<?php echo get_template_directory_uri(); ?>/images/4.png" alt="">
+                  <div class="sm-city-name">Berlin</div>
+                  <div class="sm-date">9.25.16</div></a>
                 </div>
 
                 <div class="col-xs-6 col-md-6 project-5">

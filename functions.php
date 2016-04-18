@@ -816,14 +816,14 @@ function ism_currency_converter()
 	echo $responseTxt;
 }
 
-// total amount donated 
-function ism_total_amount_donated_towards_jerusalem()
+// total amount donated
+function ism_total_amount_donated_towards_jerusalem($venue)
 {
 	$args = array( 
 	  'meta_query' => array(
 	    array(
 	        'key' => 'what_marathon_like_to_participate',
-	        'value' => 'Jerusalem Marathon',
+	        'value' => $venue,
 	        'compare' => '='
 	    ),
 	  ) 
