@@ -1467,7 +1467,7 @@
             return false;
         });
     }
-	 $('#clock').countdown('2016/03/18', function(event) {
+	 $('#clock').countdown('2016/09/25', function(event) {
 	   $(this).html(event.strftime('%D Days: %H Hours:  %M Minutes: %S Seconds'));
 	 });
 

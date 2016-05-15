@@ -19,20 +19,11 @@ get_header(); ?>
               <img height="180" src="<?php echo get_template_directory_uri(); ?>/images/watch-icon.png" alt="">
             </a>
               <div class="media-body">
-                <h1 class="media-heading heading text-uppercase">Jerusalem marathon </h1>
+                <h1 class="media-heading heading text-uppercase">Berlin marathon </h1>
                 <h3 id="clock" class=""></h3>
-                <h4 class="">Total Amount Donated: <?php ism_total_amount_donated_towards_jerusalem('Jerusalem Marathon');?></h4>
+                <h4 class="">Total Amount Donated Towards Berlin Marathon: <?php ism_total_amount_donated_towards_jerusalem('Berlin Marathon');?></h4>
               </div>
             </div>
-        </div>
-      </div>
-    </section>
-    <section class="divider parallax countdown-box" data-bg-color="#1f9b22">
-      <div class="container pt-40 pb-40">
-        <div class="row">
-          <div class="col-md-12 text-center"> 
-            <h4 class="">Total Amount Donated Towards Berlin: <?php ism_total_amount_donated_towards_jerusalem('Berlin Marathon');?></h4>
-          </div>
         </div>
       </div>
     </section>

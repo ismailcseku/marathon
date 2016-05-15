@@ -636,6 +636,18 @@ register_post_type('fake-post',
 		'rewrite'         => array('slug' => 'fakepost'),
 		'hierarchical'    => false,
 		//'supports'        => array('title','editor','custom-fields'),
+
+		'supports'              => array( ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
 	)
 );
 
