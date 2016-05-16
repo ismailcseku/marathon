@@ -549,7 +549,7 @@ if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow
 class ismail_walker_nav_menu extends Walker_Nav_Menu {
   
 // add classes to ul sub-menus
-function start_lvl( &$output, $depth ) {
+function start_lvl( &$output, $depth, $args ) {
     // depth dependent classes
     $indent = ( $depth > 0  ? str_repeat( "\t", $depth ) : '' ); // code indent
     $display_depth = ( $depth + 1); // because it counts the first submenu as 0
