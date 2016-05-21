@@ -11,71 +11,102 @@ get_header(); ?>
 
 
 <?php
-//$encoded_data consists of userid_wpnonce_amount
-$encoded_data = trim(decodePaymentProcessingData($_REQUEST['wpnoncevalue']));
-//remove =,0 at the end
-$encoded_data_removeextracharacter = explode('=', $encoded_data);
-$encoded_data = $encoded_data_removeextracharacter[0];
-$encoded_data_array = explode('_', $encoded_data);
+print_r($_POST);
 
-
-//user prestored order:
-$prestored_order = trim(get_user_meta(esc_attr($encoded_data_array[0]), 'sponsoring_request_wpnonce', true));
-//remove =,0 at the end
-$prestored_order_removeextracharacter = explode('=', $prestored_order);
-$prestored_order = $prestored_order_removeextracharacter[0];
-$prestored_order_array = explode('_', $prestored_order);
-
-//if verified wpnonce
-if (isset( $_REQUEST["r"] ) && $_REQUEST["r"] == $encoded_data_array[0] && $encoded_data == $prestored_order && wp_verify_nonce($encoded_data_array[1], 'sponsorme_'.$encoded_data_array[0])) {	
-	$user_id = esc_attr($_REQUEST["r"]);
+	/*
+	//$value consists of userid_wpnonce_amount, here i have added extra = at the end because i am facing problem extra 0 at the end of the decoded string.
+	$value = esc_attr($_POST['RID']).'_'.esc_attr($_POST['_wpnonce']).'_'.esc_attr($_POST['Amount']).'_'.esc_attr($_POST['currency_code']).'=';
+	//add to database
+	delete_user_meta(esc_attr($_POST['RID']), 'sponsoring_request_wpnonce');
+	add_user_meta(esc_attr($_POST['RID']), 'sponsoring_request_wpnonce', $value);
+	//sponsored comment
+	$comment = $_POST['Comments'];
+	delete_user_meta(esc_attr($_POST['RID']), 'sponsored_comment');
+	add_user_meta(esc_attr($_POST['RID']), 'sponsored_comment', $comment);
+	//sponsored comment
+	$sponsor_name = $_POST['FirstName'].' '.$_POST['LastName'];
+	delete_user_meta(esc_attr($_POST['RID']), 'sponsor_name');
+	add_user_meta(esc_attr($_POST['RID']), 'sponsor_name', $sponsor_name);
+	//sponsored comment
+	$sponsor_email = $_POST['email'];
+	delete_user_meta(esc_attr($_POST['RID']), 'sponsor_email');
+	add_user_meta(esc_attr($_POST['RID']), 'sponsor_email', $sponsor_email);
 	
-	//update pledged value
-  $exchange_rate = $redux_demo[strtolower($encoded_data_array[3]).'-to-usd'];
-	$pledged_amount = $encoded_data_array[2];
-	$pledged_amount_in_usd = $pledged_amount * $exchange_rate;
-	$runner_pledged = get_user_meta($user_id, 'runner_pledged', true) + $pledged_amount_in_usd;
-	update_user_meta($user_id, 'runner_pledged', $runner_pledged);
-	
-	//add comment
-	$comment_content = get_user_meta($user_id, 'sponsored_comment', true);
-	$comment_content = stripslashes(nl2br($comment_content));
-	$sponsor_name = get_user_meta($user_id, 'sponsor_name', true);
-	$sponsor_email = get_user_meta($user_id, 'sponsor_email', true);
-	addCommentBySponsor($user_id, $comment_content, $sponsor_name, $sponsor_email);
-	
-	//send mail
-	$user_info = get_userdata($user_id);
-	wp_mail( $user_info->user_email, 'Received Payment | ALEH Ascend', 'You have received '.$encoded_data_array[3].$encoded_data_array[2].' by '.$sponsor_name );
-	
-	//delete wpnonce	
-	delete_user_meta($user_id, 'sponsoring_request_wpnonce');
-
-
-	//update pledged history
-	$pledged_history_field_key = "donation_history";
-	$pledged_history_post_id = "user_".$user_id;
-	$pledged_history_value = get_field($pledged_history_field_key, $pledged_history_post_id);
-	$pledged_history_value[] = array(
-									"donation_history_donated_by" => $sponsor_name,
-									"donation_history_donated_amount_usd" => $pledged_amount_in_usd,
-									"donation_history_donated_currency" => $encoded_data_array[3],
-									"donation_history_donated_amount_in_currency" => $encoded_data_array[2]
-							);
-	update_field( $pledged_history_field_key, $pledged_history_value, $pledged_history_post_id );
-		
-		
-}
+	echo $new_wpnonce = encodePaymentProcessingData($value);*/
 ?>
-			<?php
-				// Start the Loop.
-				while ( have_posts() ) : the_post();
 
-					// Include the page content template.
-					get_template_part( 'content', 'page' );
+Array
+(
+    [_wpnonce] => c21ad33cde
+    [RID] => 1
+    [CEV] => 
+    [FORMTYPE] => ASCEND
+    [Description] => Sponsor Dev Team (1)
 
-				endwhile;
-			?>
+    [CampaignCode] => Ascend1
+    [currency_code] => ILS
+    [Amount] => 150
+    [FirstName] => ismail
+    [LastName] => test
 
+    [Address] => khulna
+    [City] => khulna
+    [State] =>  
+    [ZIP] => 234
+    [country] => United States Minor Outlying Islands
+
+    [email] => ismailcseku@gmail.com
+    [Telephone] => 23423
+    [CreditCardType] => AMEX
+    [CardNum] => 324dsfasdfsdf
+    [NameOnCard] => ssdf asdf
+
+    [CVV] => 123
+    [ValidMonth] => 03
+    [validYear] => 17
+    [Comments] => test1234
+    [sendme_information] => no
+)
+
+
+
+      <form id="sponsor-me-payment-form-after-processing" action="<?php echo esc_url( home_url( '/donation-processing' ) ); ?>" method="POST" name="DonationForm">
+      	<input type="hidden" name="_wpnonce" value="<?php echo $_POST['_wpnonce'] );?>" />
+      	<input type="hidden" name="RID" value="<?php echo $_POST['RID'] );?>" />
+      	<input type="hidden" name="CEV" value="<?php echo $_POST['CEV'] );?>" />
+      	<input type="hidden" name="FORMTYPE" value="<?php echo $_POST['FORMTYPE'] );?>" />
+      	<input type="hidden" name="Description" value="<?php echo $_POST['Description'] );?>" />
+
+      	<input type="hidden" name="CampaignCode" value="<?php echo $_POST['CampaignCode'] );?>" />
+      	<input type="hidden" name="currency_code" value="<?php echo $_POST['currency_code'] );?>" />
+      	<input type="hidden" name="Amount" value="<?php echo $_POST['Amount'] );?>" />
+      	<input type="hidden" name="FirstName" value="<?php echo $_POST['FirstName'] );?>" />
+      	<input type="hidden" name="LastName" value="<?php echo $_POST['LastName'] );?>" />
+
+      	<input type="hidden" name="Address" value="<?php echo $_POST['Address'] );?>" />
+      	<input type="hidden" name="City" value="<?php echo $_POST['City'] );?>" />
+      	<input type="hidden" name="State" value="<?php echo $_POST['State'] );?>" />
+      	<input type="hidden" name="ZIP" value="<?php echo $_POST['ZIP'] );?>" />
+      	<input type="hidden" name="country" value="<?php echo $_POST['country'] );?>" />
+
+      	<input type="hidden" name="email" value="<?php echo $_POST['email'] );?>" />
+      	<input type="hidden" name="Telephone" value="<?php echo $_POST['Telephone'] );?>" />
+      	<input type="hidden" name="CreditCardType" value="<?php echo $_POST['CreditCardType'] );?>" />
+      	<input type="hidden" name="CardNum" value="<?php echo $_POST['CardNum'] );?>" />
+      	<input type="hidden" name="NameOnCard" value="<?php echo $_POST['NameOnCard'] );?>" />
+
+        <input type="hidden" name="CVV" value="<?php echo $_POST['CVV'] );?>" />
+        <input type="hidden" name="ValidMonth" value="<?php echo $_POST['ValidMonth'] );?>" />
+        <input type="hidden" name="validYear" value="<?php echo $_POST['validYear'] );?>" />
+      	<input type="hidden" name="Comments" value="<?php echo $_POST['Comments'] );?>" />
+      	<input type="hidden" name="sendme_information" value="<?php echo $_POST['sendme_information'] );?>" />
+      </form>
+
+
+<script>
+jQuery(document).ready(function(e) {
+  jQuery('#sponsor-me-payment-form-after-processing').submit();
+});
+</script>
 <?php
 get_footer();

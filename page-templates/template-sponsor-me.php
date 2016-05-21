@@ -526,7 +526,8 @@ get_header(); ?>
                   </div>
                 </div>
               </div>
-              <a id="paymen-form-submit" class="btn btn-default">Submit</a>
+              <!-- <a id="paymen-form-submit" class="btn btn-default">Submit</a> -->
+              <input type="submit" value="Submit">
             </div>
             <div class="col-md-12 text-right mt-30"> <a data-text-color="#0251d4" href="<?php echo esc_url( home_url('/runner-page/?r='.$user_id) ); ?>"> <u>Back to <?php echo $first_name;?>'s Page</u></a> </div>
           </div>
@@ -538,7 +539,7 @@ get_header(); ?>
 
 <script>
 jQuery(document).ready(function(e) {
-	jQuery('#paymen-form-submit').click(function(e){
+	jQuery('#paymen-form-submit2').click(function(e){
 				var rid = jQuery("#RID").val();
 				var wn = jQuery("#_wpnonce").val();
 				var a = jQuery("#Amount").val();
