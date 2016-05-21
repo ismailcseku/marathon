@@ -92,7 +92,7 @@
               <?php
 				}
 			  ?>
-              <li><a href="<?php echo esc_url( home_url( '/contact-israel' ) ); ?>"><img style="width:25px;" src="http://runforaleh.org/wp-content/uploads/2015/10/Israel_flag_300.png" alt=""></a></li>
+              <li><a href="<?php echo esc_url( home_url( '/contact-israel' ) ); ?>"><img style="width:25px;" src="https://runforaleh.org/wp-content/uploads/2015/10/Israel_flag_300.png" alt=""></a></li>
             </ul>
             </div>
           </div>

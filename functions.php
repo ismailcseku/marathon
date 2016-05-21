@@ -856,6 +856,6 @@ function ism_total_amount_donated_towards_jerusalem($venue)
 function insert_image_src_rel_in_head($runner_profile_photo) {
   $runner_profile_photo; //replace this with a default image on your server or an image in your media library
   //echo '<meta property="og:image" content="' . $runner_profile_photo . '"/>';
-  echo '<meta property="og:image" content="http://runforaleh.org/wp-content/themes/marathon/images/logo6.png"/>';
+  echo '<meta property="og:image" content="https://runforaleh.org/wp-content/themes/marathon/images/logo6.png"/>';
 }
 add_action('wp_head', 'insert_image_src_rel_in_head', 10,1);

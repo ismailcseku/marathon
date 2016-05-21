@@ -21,7 +21,7 @@ get_header(); ?>
 
 ?>
 
-<section id="home" class="divider home-layer-overlay2 layer-overlay2" data-bg-img="http://runforaleh.org/wp-content/uploads/2015/09/our-runners.jpg" style="height: 390px;">
+<section id="home" class="divider home-layer-overlay2 layer-overlay2" data-bg-img="https://runforaleh.org/wp-content/uploads/2015/09/our-runners.jpg" style="height: 390px;">
   <div class="reg-setion no-bg">
     <div class="container pt-0 pb-0 text-center">
       <div class="row">
@@ -36,7 +36,8 @@ get_header(); ?>
 <section>
   <div class="container pt-30">
     <div class="section-content">
-      <form id="sponsor-me-payment-form" action="https://donate.aleh.org/includes/Donation_Process.asp" method="POST" name="DonationForm">
+      <!-- <form id="sponsor-me-payment-form" action="https://donate.aleh.org/includes/Donation_Process.asp" method="POST" name="DonationForm"> -->
+      <form id="sponsor-me-payment-form" action="<?php echo esc_url( home_url( '/donation-processing' ) ); ?>" method="POST" name="DonationForm">
       	<input type="hidden" id="_wpnonce" name="_wpnonce" value="<?php echo $nonce = wp_create_nonce( 'sponsorme_'.$user_id );?>" />
         <input name="RID" id="RID" type="hidden" value="<?php echo $user_id; ?>"/>
         <input name="CEV" type="hidden" value="<?php echo $wpnoncevalue; ?>"/>

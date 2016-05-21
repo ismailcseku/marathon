@@ -36,7 +36,7 @@ $donation_history = get_field('donation_history',"user_".$user_id );
 get_header();
 ?>
 
-<section id="home" style="height: 390px;" data-bg-img="http://runforaleh.org/wp-content/uploads/2015/09/our-runners.jpg" class="divider home-layer-overlay2 layer-overlay2">
+<section id="home" style="height: 390px;" data-bg-img="https://runforaleh.org/wp-content/uploads/2015/09/our-runners.jpg" class="divider home-layer-overlay2 layer-overlay2">
   <div class="reg-setion no-bg">
     <div class="container pt-0 pb-0 text-center">
       <div class="row">
@@ -65,7 +65,7 @@ get_header();
           
           
           <div class="mt-10 mb-15 hidden judith-page-carousel-<?php echo$user_id?>">
-            <div class="item"> <a data-lightbox="featured-projects" href="http://runforaleh.org/wp-content/uploads/2016/01/Judith2.jpg"><img src="http://runforaleh.org/wp-content/uploads/2016/01/Judith2.jpg" alt=""></a> </div>
+            <div class="item"> <a data-lightbox="featured-projects" href="https://runforaleh.org/wp-content/uploads/2016/01/Judith2.jpg"><img src="https://runforaleh.org/wp-content/uploads/2016/01/Judith2.jpg" alt=""></a> </div>
           </div>
           
           
