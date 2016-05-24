@@ -68,38 +68,38 @@ get_header(); ?>
               <div class="form-group mb-40 mt-20">
                 <label class="control-label col-sm-3 font-24 text-right" for="usa-doller"> Amount:</label>
                 <div class="col-sm-6">
-                  <input id="Amount" class="form-control" placeholder="" type="text" name="Amount">
+                  <input id="Amount" class="form-control" placeholder="" type="text" name="Amount" required="">
                   <div class="currency-response" style="font-size:14px;"></div>
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="name"> FIRST NAME :</label>
                 <div class="col-sm-6">
-                  <input id="sponsor_fname" class="form-control" name="FirstName" placeholder="" type="text">
+                  <input id="sponsor_fname" class="form-control" name="FirstName" required="" placeholder="" type="text">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="name"> LAST NAME :</label>
                 <div class="col-sm-6">
-                  <input id="sponsor_lname" class="form-control" name="LastName" placeholder="" type="text">
+                  <input id="sponsor_lname" class="form-control" name="LastName" required="" placeholder="" type="text">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="email"> ADDRESS :</label>
                 <div class="col-sm-6">
-                  <input class="form-control" placeholder="" name="Address">
+                  <input class="form-control" placeholder="" name="Address" required="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="email"> CITY :</label>
                 <div class="col-sm-6">
-                  <input class="form-control" placeholder="" name="City">
+                  <input class="form-control" placeholder="" name="City" required="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="email"> STATE :</label>
                 <div class="col-sm-6">
-                  <select name="State" size="1" class="form-control">
+                  <select name="State" size="1" class="form-control" required="">
                     <option value="-- Please Select -- ">-- Please Select 
                     --</option>
                     <option value=" ">Non-US Address</option>
@@ -182,13 +182,13 @@ get_header(); ?>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="email"> ZIP :</label>
                 <div class="col-sm-6">
-                  <input  class="form-control" placeholder="" name="ZIP">
+                  <input  class="form-control" placeholder="" name="ZIP" required="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="email"> COUNTRY :</label>
                 <div class="col-sm-6">
-                  <select name="country" size="1" class="form-control">
+                  <select name="country" size="1" class="form-control" required="">
                     <option>Afghanistan</option>
                     <option>Albania</option>
                     <option>Algeria</option>
@@ -434,20 +434,20 @@ get_header(); ?>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="email"> EMAIL :</label>
                 <div class="col-sm-6">
-                  <input id="sponsor_email" class="form-control" placeholder="" type="email" name="email">
+                  <input id="sponsor_email" class="form-control" placeholder="" type="email" name="email" required="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="phone"> PHONE :</label>
                 <div class="col-sm-6">
-                  <input id="tel" class="form-control" placeholder="" type="tel" name="Telephone">
+                  <input id="tel" class="form-control" placeholder="" type="tel" name="Telephone" required="">
                 </div>
               </div>
               <hr>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="phone"> CREDIT CARD TYPE :</label>
                 <div class="col-sm-6">
-                  <select name="CreditCardType" size="1" class="form-control">
+                  <select name="CreditCardType" size="1" class="form-control" required="">
                     <option value="ISRA">Isracard</option>
                     <option selected="" value="VISA">Visa</option>
                     <option value="MC">Mastercard</option>
@@ -460,25 +460,25 @@ get_header(); ?>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="phone"> CREDIT CARD NUMBER :</label>
                 <div class="col-sm-6">
-                  <input id="tel" class="form-control" placeholder="" type="tel" name="CardNum">
+                  <input id="tel" class="form-control" placeholder="" type="tel" name="CardNum" required="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="phone"> NAME ON CARD :</label>
                 <div class="col-sm-6">
-                  <input id="tel" class="form-control" placeholder="" type="tel" name="NameOnCard">
+                  <input id="tel" class="form-control" placeholder="" type="tel" name="NameOnCard" required="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="phone"> CVV (3 or 4 digit Code) :</label>
                 <div class="col-sm-6">
-                  <input id="tel" class="form-control" placeholder="" type="tel" name="CVV">
+                  <input id="tel" class="form-control" placeholder="" type="tel" name="CVV" required="">
                 </div>
               </div>
               <div class="form-group">
                 <label class="control-label col-sm-3" for="phone"> EXPIRATION DATE :</label>
                 <div class="col-sm-6">
-                  <select id="ValidMonth" class="filed3" name="ValidMonth" size="1">
+                  <select id="ValidMonth" class="filed3" name="ValidMonth" size="1" required="">
                     <option value="01">01</option>
                     <option value="02">02</option>
                     <option value="03">03</option>
