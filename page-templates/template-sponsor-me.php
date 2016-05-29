@@ -100,9 +100,8 @@ get_header(); ?>
                 <label class="control-label col-sm-3" for="email"> STATE :</label>
                 <div class="col-sm-6">
                   <select name="State" size="1" class="form-control" required="">
-                    <option value="-- Please Select -- ">-- Please Select 
-                    --</option>
-                    <option value=" ">Non-US Address</option>
+                    <option value="">-- Please Select --</option>
+                    <option>Non-US Address</option>
                     <option>Non-US</option>
                     <option>Alabama</option>
                     <option>Alaska</option>
