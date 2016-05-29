@@ -70,10 +70,11 @@ get_header(); ?>
                 </div>
 
                 <div class="col-xs-6 col-md-6 project-3">
-		<a href="<?php echo esc_url( home_url( '/tiberias/' ) ); ?>">
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/3.png" alt="">
-                  <div class="sm-city-name">Tiberias</div>
-                  <div class="sm-date" style="font-size: 13px;">Stay tuned for 2017 date</div></a>
+		  <a href="<?php echo esc_url( home_url( '/tiberias/' ) ); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/3.png" alt="">
+                    <div class="sm-city-name">Tiberias</div>
+                    <div class="sm-date" style="font-size: 13px;">Stay tuned for 2017 date</div>
+                  </a>
                 </div>
                 
                 <div class="col-xs-6 col-md-6 project-4">
@@ -89,6 +90,7 @@ get_header(); ?>
                     <img src="<?php echo get_template_directory_uri(); ?>/images/5.png" alt="">
                     <div class="sm-city-name">New York</div>
                     <div class="sm-date"></div>
+                    <div class="sm-date" style="font-size: 13px;">Stay tuned for 2017 date</div>
                   </a>
                 </div>
               </div>
