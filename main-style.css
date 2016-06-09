@@ -2049,3 +2049,11 @@ body.page .vc_row {
   padding-left: 15px;
   padding-right: 15px;
 }
+.error {
+  border-color: #a94442;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+label.error {
+    color: #a94442;
+    font-size: 12px;  
+}

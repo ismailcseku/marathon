@@ -8,6 +8,8 @@
  */
 
 get_header(); ?>
+
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.validate.min.js"></script>
 <?php 
 	$user_id = $_REQUEST['r'];
 	$user_info = get_userdata($user_id);
@@ -437,14 +439,14 @@ get_header(); ?>
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-sm-3" for="phone"> PHONE :</label>
+                <label class="control-label col-sm-3" for="Telephone"> PHONE :</label>
                 <div class="col-sm-6">
                   <input id="tel" class="form-control" placeholder="" type="tel" name="Telephone" required="">
                 </div>
               </div>
               <hr>
               <div class="form-group">
-                <label class="control-label col-sm-3" for="phone"> CREDIT CARD TYPE :</label>
+                <label class="control-label col-sm-3" for="CreditCardType"> CREDIT CARD TYPE :</label>
                 <div class="col-sm-6">
                   <select name="CreditCardType" size="1" class="form-control" required="">
                     <option value="ISRA">Isracard</option>
@@ -457,25 +459,25 @@ get_header(); ?>
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-sm-3" for="phone"> CREDIT CARD NUMBER :</label>
+                <label class="control-label col-sm-3" for="CardNum"> CREDIT CARD NUMBER :</label>
                 <div class="col-sm-6">
                   <input id="tel" class="form-control" placeholder="" type="tel" name="CardNum" required="">
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-sm-3" for="phone"> NAME ON CARD :</label>
+                <label class="control-label col-sm-3" for="NameOnCard"> NAME ON CARD :</label>
                 <div class="col-sm-6">
                   <input id="tel" class="form-control" placeholder="" type="tel" name="NameOnCard" required="">
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-sm-3" for="phone"> CVV (3 or 4 digit Code) :</label>
+                <label class="control-label col-sm-3" for="CVV"> CVV (3 or 4 digit Code) :</label>
                 <div class="col-sm-6">
                   <input id="tel" class="form-control" placeholder="" type="tel" name="CVV" required="">
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-sm-3" for="phone"> EXPIRATION DATE :</label>
+                <label class="control-label col-sm-3" for="ValidMonth"> EXPIRATION DATE :</label>
                 <div class="col-sm-6">
                   <select id="ValidMonth" class="filed3" name="ValidMonth" size="1" required="">
                     <option value="01">01</option>
@@ -506,7 +508,7 @@ get_header(); ?>
               </div>
               <br>
               <div class="form-group">
-                <label class="control-label col-sm-3" for="phone"> Comment : <br> <small style="font-weight: normal;">This comment will be posted on the runner page</small></label>
+                <label class="control-label col-sm-3" for="Comments"> Comment : <br> <small style="font-weight: normal;">This comment will be posted on the runner page</small></label>
                 <div class="col-sm-6">
                   <textarea id="sponsor_comment" aria-required="true" class="form-control" cols="45" name="Comments" required rows="8"></textarea>
                 </div>
@@ -536,9 +538,47 @@ get_header(); ?>
   </div>
 </section>
 
+    <script type="text/javascript">
+
+        jQuery( document ).ready( function () {
+            jQuery( "#sponsor-me-payment-form" ).validate( {
+                rules: {
+                    Amount: {
+                        required: true,
+                        number: true
+                    },
+                    Address: {
+                        required: true,
+                        minlength: 5
+                    },
+                    Telephone: {
+                        required: true,
+                        minlength: 8
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    agree: "required"
+                },
+                messages: {
+                    firstname: "Please enter your firstname",
+                    lastname: "Please enter your lastname",
+                    email: "Please enter a valid email address",
+                    agree: "Please accept our policy"
+                }
+            } );
+        } );
+
+        jQuery( "#sponsor-me-payment-form :input").change(function() {
+            jQuery(this).val(jQuery(this).val().trim());
+        });
+    </script>
+
 <script>
-jQuery(document).ready(function(e) {
-	jQuery('#paymen-form-submit2').click(function(e){
+//this is not needed now
+/*jQuery(document).ready(function(e) {
+	jQuery('#paymen-form-submit2===========').click(function(e){
 				var rid = jQuery("#RID").val();
 				var wn = jQuery("#_wpnonce").val();
 				var a = jQuery("#Amount").val();
@@ -559,7 +599,7 @@ jQuery(document).ready(function(e) {
 				});
 				return false;
 		});
-});
+});*/
 </script>
 
 
